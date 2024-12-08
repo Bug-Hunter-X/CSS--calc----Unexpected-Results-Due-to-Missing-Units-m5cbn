@@ -1,0 +1,24 @@
+/* bugSolution.css */
+
+.container {
+  width: calc(100% - 50px); /* Corrected: Added 'px' unit */
+}
+
+.element {
+  width: calc(50% - 20px);  /*Corrected: Added 'px' unit */
+  height: calc(100px + 2em);/* Added units for clarity */
+}
+
+/* Using variables with explicit units */
+:root {
+  --sidebar-width: 200px;
+}
+
+.content {
+  width: calc(100% - var(--sidebar-width));
+}
+
+/* Nested calc() with units */
+.nested {
+  width: calc(50% - calc(10px + 5%)); /* Corrected units added */
+}
